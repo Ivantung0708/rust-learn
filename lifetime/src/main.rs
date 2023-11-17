@@ -12,6 +12,11 @@ fn get_ref (x: &i32) -> &i32 {
     x
 } 
 fn main() {
+    let x = 10;
+    let y = 20;
+    let z = larger(&x,&y);
+    let w = get_ref(z);
+    println!("{w}");
     // let x = 10;
     //let z;
     // {
