@@ -16,7 +16,7 @@ fn main() {
     algo::traverse_tree(&root, |node| {
         println!("{}", node.borrow().data);
     });
-
+    
     println!("{:?}", algo::depth_first_search(&root, 4));
     println!("{:?}", algo::breadth_first_search(&root, 6));
 }

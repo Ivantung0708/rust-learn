@@ -35,4 +35,6 @@ fn main() {
     let z = Box::new(a);
     println!("hello {}",z.data);
     //println!("{}",a.data);
+    let m:Option<i32> = None;
+    println!("{}",m.unwrap());
 }

@@ -4,4 +4,5 @@ members = [
     "lifetime",
     "test2",
     "week4_hw1",
+    "deque",
 ]

@@ -1,1 +1,1 @@
-/home/ivantung/rust-learn/target/debug/week4_hw1: /home/ivantung/rust-learn/week4_hw1/src/main.rs
+/home/ivantung/rust-learn/target/debug/week4_hw1: /home/ivantung/rust-learn/week4_hw1/src/algo/mod.rs /home/ivantung/rust-learn/week4_hw1/src/main.rs /home/ivantung/rust-learn/week4_hw1/src/node/mod.rs

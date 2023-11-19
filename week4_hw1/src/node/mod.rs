@@ -44,20 +44,21 @@ pub fn append_child<T>(node: &NodeRef<T>, child: &NodeRef<T>) {
 
 #[allow(dead_code, unused_variables)]
 pub fn get_child<T>(node: &NodeRef<T>, index: usize) -> Option<NodeRef<T>> {
-    let child = node.borrow().children.get(index);
+    let node_bor = node.borrow();
+    let child = node_bor.children.get(index);
     let new_rc = match child {
         None => None,
-        Some(T) => Some(Rc::clone(child.unwrap())),
+        Some(_t) => Some(Rc::clone(child.unwrap())),
     };
     new_rc
 }
 
 #[allow(dead_code, unused_variables)]
 pub fn get_parent<T>(node: &NodeRef<T>) -> Option<NodeRef<T>> {
-    let node_parent = node.borrow().parent;
+    let node_parent = &node.borrow().parent;
     let new_rc = match node_parent {
         None => None,
-        Some(T) => node_parent.unwrap().upgrade(),
+        Some(_t) => node_parent.as_ref().unwrap().upgrade(),
     };
     new_rc
 }
