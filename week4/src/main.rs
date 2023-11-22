@@ -27,7 +27,7 @@ fn main() {
         tx.send("1").unwrap();
         tx.send("2").unwrap();
         tx.send("3").unwrap();
-        let mut val = x.try_lock();
+        let val = x.try_lock();
         match val {
             Ok(mut val) =>{
                 println!("value changed by thread 1");
@@ -40,7 +40,7 @@ fn main() {
     });
     let _ = spawn(move || {
         tx1.send("hello").unwrap();
-        let mut val = y.try_lock();
+        let val = y.try_lock();
         match val {
             Ok(mut val) => {
                 *val += 1;
